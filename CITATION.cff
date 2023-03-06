@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use WarpSpeed in your research, please cite it using this metadata."
+title: "WarpSpeed, A Tensorflow GSPMD implementation of Microsoft's DeepSpeed library."
+abstract: Warp-Speed is TensorFlow GSPMD. The project aims to (i) port optimizations from Microsoft's DeepSpeed library to TensorFlow through various XLA-compiler optimizations like GSPMD, (ii) explore better strategies for mixed-precision quantization for facilitating sparser model architectures, and (iii) provide an extensible API for scalable training and inference. WarpSpeed is developed in C++ and Python with TensorFlow with support for JAX + Flax.
+authors:
+- family-names: "Bennett"
+  given-names: "Cory"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.7818463
+    description: The concept DOI for the collection containing all versions of the Citation File Format.
+date-released: "2023-03-06"
+license: "Apache-2.0"
+doi: 10.5281/zenodo.7818463

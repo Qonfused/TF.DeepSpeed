@@ -8,10 +8,11 @@
   <h1>WarpSpeed</h1>
 
   <!-- Repository Badges --->
+  <a href="https://zenodo.org/badge/latestdoi/625935606">![DOI](https://zenodo.org/badge/625935606.svg)</a>
   <a href="/LICENSE">![License](https://img.shields.io/badge/⚖_License-Apache%202%2E0-lightblue?labelColor=3f4551)</a>
   <a href="/docs/CHANGELOG.md">![SemVer](https://img.shields.io/badge/SemVer-v0.0.0-important?logo=SemVer&labelColor=3f4551)</a>
 
-  <p>Tensorflow <strong>GSPMD</strong> implementation of Microsoft's <strong>DeepSpeed</strong> Library.</p>
+  <p>TensorFlow <strong>GSPMD</strong> implementation of Microsoft's <strong>DeepSpeed</strong> Library.</p>
 </div>
 
 <div style="text-align: right">
