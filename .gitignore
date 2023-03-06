@@ -1,0 +1,38 @@
+.*
+!/.github
+!/.github/ci/.*
+!/.gitattributes
+!/.gitignore
+
+# Editor configs
+!/.vscode
+
+# Bazel
+!/.bazelrc
+!/.bazelversion
+/bazel-*
+/bazel_pip
+
+# Clang
+!**/.clang-format
+
+# Pylint
+!/.pylintrc
+
+# Yapf
+!/.style.yapf
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Notebooks
+.ipynb_checkpoints

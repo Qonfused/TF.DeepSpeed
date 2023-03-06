@@ -1,0 +1,23 @@
+# WarpSpeed Bazel configuration.
+#
+# See https://docs.bazel.build/versions/master/user-manual.html#config for
+# details on the various configuration options.
+
+# Enable build optimizations.
+build --compilation_mode=opt
+# Enable fast C++ protocol buffers, 10x speedup over pure Python.
+build --define use_fast_cpp_protos=true
+build --define=allow_oversize_protos=true
+
+# Processor native optimizations (depends on build host capabilities).
+build --copt=-march=native
+build --host_copt=-march=native
+build --copt=-O3
+
+# Build with C++ 17 features.
+build:c++17 --cxxopt=-std=c++1z
+build:c++17 --cxxopt=-stdlib=libc++
+build:c++1z --config=c++17
+
+# Put user-specific options in .bazelrc.user
+try-import %workspace%/.bazelrc.user
