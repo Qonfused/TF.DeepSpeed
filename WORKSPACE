@@ -1,16 +1,19 @@
-workspace(name = "project_warpspeed")
+workspace(name = "org_warpspeed")
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository", "new_git_repository")
 
-#
-# Direct dependencies
-#
-
+# Specify the minimum required bazel version.
 git_repository(
     name = "bazel_skylib",
     remote = "https://github.com/bazelbuild/bazel-skylib.git",
     tag = "1.3.0",
 )
+load("@bazel_skylib//lib:versions.bzl", "versions")
+versions.check("5.3.0")
+
+#
+# Direct dependencies
+#
 
 git_repository(
     name = "com_google_absl",
