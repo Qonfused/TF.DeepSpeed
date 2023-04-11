@@ -19,5 +19,9 @@ build:c++17 --cxxopt=-std=c++1z
 build:c++17 --cxxopt=-stdlib=libc++
 build:c++1z --config=c++17
 
+# Enable 'remotable' parameter in repository_rule() calls.
+# This is required for TensorFlow's calls in third_party/py/python_configure.bzl
+build --experimental_repo_remote_exec
+
 # Put user-specific options in .bazelrc.user
 try-import %workspace%/.bazelrc.user

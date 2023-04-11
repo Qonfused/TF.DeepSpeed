@@ -7,6 +7,12 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository", "new_git_r
 #
 
 git_repository(
+    name = "bazel_skylib",
+    remote = "https://github.com/bazelbuild/bazel-skylib.git",
+    tag = "1.3.0",
+)
+
+git_repository(
     name = "com_google_absl",
     commit = "66665d8d2e3fedff340b83f9841ca427145a7b26",
     remote = "https://github.com/abseil/abseil-cpp.git",
@@ -32,16 +38,11 @@ git_repository(
 
 git_repository(
     name = "org_tensorflow",
-    # TODO(b/256948367): Temporarily updating the version of TF past the version
-    # in https://github.com/tensorflow/federated/blob/main/requirements.txt.
-    #
-    # The version of this dependency should match the version in
-    # https://github.com/tensorflow/federated/blob/main/requirements.txt.
+    # Temporarily lock TensorFlow version for git patch.
     commit = "b517bde1f9e9231e4816b98522f2d2851840b743",
     patches = [
-        # Depending on restricted visibility BUILD target on external git
-        # repository does not seem to be supported.
-        # E.g. issue: https://github.com/bazelbuild/bazel/issues/3744
+        # De-op restricted visibility BUILD targets in TensorFlow C++ APIs.
+        # @see: https://github.com/bazelbuild/bazel/issues/3744
         # TODO(b/263201501): Make DTensor C++ API public and remove this patch.
         "//third_party/tensorflow:dtensor_internal_visibility.patch",
         "//third_party/tensorflow:internal_visibility.patch",
@@ -84,10 +85,6 @@ git_repository(
 # Inlined transitive dependencies, grouped by direct dependency.
 #
 
-# FIXME: `py_repositories` is a no-op and is depreciated.
-# load("@rules_python//python:repositories.bzl", "py_repositories")
-# py_repositories()
-
 # Required by pybind11_abseil and pybind11_protobuf
 new_git_repository(
     name = "pybind11",
@@ -102,18 +99,29 @@ new_git_repository(
 
 load("@org_tensorflow//tensorflow:workspace3.bzl", "tf_workspace3")
 tf_workspace3()
+
 load("@org_tensorflow//tensorflow:workspace2.bzl", "tf_workspace2")
 tf_workspace2()
+
 load("@org_tensorflow//tensorflow:workspace1.bzl", "tf_workspace1")
 tf_workspace1()
+
 load("@org_tensorflow//tensorflow:workspace0.bzl", "tf_workspace0")
 tf_workspace0()
 
-load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
-protobuf_deps()
-
 load("@io_bazel_rules_go//go:deps.bzl", "go_rules_dependencies")
 go_rules_dependencies()
+
+git_repository(
+    name = "bazel_gazelle",
+    remote = "https://github.com/bazelbuild/bazel-gazelle.git",
+    tag = "v0.24.0",
+)
+load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+gazelle_dependencies()
+
+load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
+protobuf_deps()
 
 git_repository(
     name = "com_github_grpc_grpc",
