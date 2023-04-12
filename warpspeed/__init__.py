@@ -1,7 +1,9 @@
-# Copyright 2023 The WarpSpeed Authors.
+## @file
+# Defines exported symbols and inits WarpSpeed module.
+#
+# Copyright (c) 2023, The WarpSpeed Authors. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
-
-"""Defines exported symbols and inits WarpSpeed module."""
+##
 
 # `warpspeed` is a namespace package.
 # https://packaging.python.org/guides/packaging-namespace-packages/#pkgutil-style-namespace-packages

@@ -1,7 +1,9 @@
-# Copyright 2023 The WarpSpeed Authors.
+## @file
+# WarpSpeed Proto library helper utils.
+#
+# Copyright (c) 2023, The WarpSpeed Authors.
 # SPDX-License-Identifier: Apache-2.0
-
-"""WarpSpeed Proto library helper utils."""
+##
 
 load("@com_google_protobuf//:protobuf.bzl", "py_proto_library")
 

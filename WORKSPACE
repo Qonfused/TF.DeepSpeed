@@ -1,3 +1,8 @@
+## @file
+# Copyright (c) 2023, The WarpSpeed Authors. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+##
+
 workspace(name = "org_warpspeed")
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository", "new_git_repository")

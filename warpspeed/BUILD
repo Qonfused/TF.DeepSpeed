@@ -1,5 +1,7 @@
-# Copyright 2023 The WarpSpeed Authors.
+## @file
+# Copyright (c) 2023, The WarpSpeed Authors. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
+##
 
 load("@rules_python//python:defs.bzl", "py_library")
 

@@ -1,7 +1,9 @@
-# Copyright 2023 The WarpSpeed Authors.
+## @file
+# Contains the version string of WarpSpeed.
+#
+# Copyright (c) 2023, The WarpSpeed Authors. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
-
-"""Contains the version string of WarpSpeed."""
+##
 
 # This project uses Semantic Versioning (https://semver.org/)
 _MAJOR_VERSION = '0'
