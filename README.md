@@ -24,7 +24,7 @@
 
   <p>This project aims to (i) port optimizations from Microsoft's <strong>DeepSpeed</strong> library to TensorFlow through various <strong>XLA-compiler</strong> optimizations like <strong>GSPMD</strong>, (ii) explore better strategies for <strong>mixed-precision quantization</strong> for facilitating sparser model architectures, and (iii) provide an <strong>extensible API</strong> for scalable training and inference.</p>
 
-  <p>WarpSpeed is developed in C++ and Python with <a href=https://github.com/google/tensorflow>TensorFlow</a> with API compatibility for <a href="https://github.com/google/jax">JAX</a> + <a href="https://github.com/google/flax">Flax</a>.</p>
+  <p>WarpSpeed is developed in C++ and Python using <a href=https://github.com/google/tensorflow>TensorFlow</a> with API compatibility for <a href="https://github.com/google/jax">JAX</a> + <a href="https://github.com/google/flax">Flax</a>.</p>
 </div>
 
 ## License
