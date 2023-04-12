@@ -9,7 +9,7 @@ exports_files(["LICENSE"])
 
 load("//warpspeed:proto.bzl", "warpspeed_py_proto_library")
 
-# tfx_py_proto_library(
+# warpspeed_py_proto_library(
 #     name = "<filename>_proto_py_pb2",
 #     srcs = ["<filename>.proto"],
 # )

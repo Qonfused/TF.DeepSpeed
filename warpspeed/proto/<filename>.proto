@@ -1,0 +1,8 @@
+# Copyright 2023 The WarpSpeed Authors.
+# SPDX-License-Identifier: Apache-2.0
+
+syntax = "proto3";
+
+package warpspeed.components.<filename>;
+
+import "google/protobuf/any.proto";
